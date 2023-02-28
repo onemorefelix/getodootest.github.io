@@ -1,10 +1,21 @@
 <html>
-    <head>
-        <title>Test</title>
-    </head>
-    <body>
-        
-    <h1>Hello world!</h1>
-    
-    </body>
+<head>
+   <title>Get data from sessionStorage in JavaScript?</title>
+</head>
+<body style="text-align: center;">
+   <p>Retreiving data from sessionStorage in JavaScript</p>
+   <p id="result"></p>
+   <script>
+      const Employee = {
+         name: 'Chatur',
+         employee_id : 1037,
+         company_name : 'Facebook',
+         role : 'Software Developer',
+         age: 27
+      }
+      sessionStorage.setItem("Employee", JSON.stringify(Employee));
+      document.getElementById('result').innerHTML = sessionStorage.getItem('Employee');
+      console.log(sessionStorage);
+   </script>
+</body>
 </html>
